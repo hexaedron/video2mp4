@@ -44,13 +44,13 @@ function main()
    
    OIFS=$IFS; IFS=$'\n'
 
-   # Recoursive processing of video files
+   # Recursive processing of video files
    for video_file in $(find "$input_dir" -name "$search_mask" | sort); do
       video_base=`basename "$video_file"`
       echo "Processing '$video_base'..." >> $LOGFILE
 
       mp4_file=$(make_mp4_file_name "$input_dir" "$output_dir" "$video_file")
-      cmd="$FFMPEG -i $video_file $mp4_file"
+      cmd="$FFMPEG -i \"$video_file\" \"$mp4_file\""
 
       eval $cmd
    done
