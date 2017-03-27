@@ -23,7 +23,7 @@ function make_mp4_file_name()
    echo "$mp4_file"
 }
 
-# Recoursively convert video files
+# Recursively convert video files
 # from input_dir to output_dir.
 # output_dir is created automatically.
 function main()
