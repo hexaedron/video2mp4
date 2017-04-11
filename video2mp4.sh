@@ -7,7 +7,7 @@ LOGFILE=video2mp4.log
 
 date > $LOGFILE
 
-# Create the directories and make file name
+# Create directories and make file name
 function make_mp4_file_name()
 {
    input_dir=$1
